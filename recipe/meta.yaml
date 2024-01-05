@@ -23,15 +23,19 @@ requirements:
     - pip
     - setuptools
     - python
-    - pyparsing >=2.1.4
+    - pyparsing >=3
   run:
     - python
-    - pyparsing >=2.1.4
-    - graphviz
+    - pyparsing >=3
+    - graphviz >=2.38.0
 
 test:
   imports:
     - pydot
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/erocarrera/pydot
