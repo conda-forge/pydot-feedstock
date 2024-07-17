@@ -1,6 +1,6 @@
 {% set name = "pydot" %}
-{% set version = "2.0.0" %}
-{% set sha256 = "60246af215123fa062f21cd791be67dda23a6f280df09f68919e637a1e4f3235" %}
+{% set version = "3.0.1" %}
+{% set sha256 = "e18cf7f287c497d77b536a3d20a46284568fea390776dface6eabbdf1b1b5efc" %}
 
 package:
   name: {{ name|lower }}
@@ -23,10 +23,10 @@ requirements:
     - pip
     - setuptools
     - python
-    - pyparsing >=3
+    - pyparsing >=3.0.9
   run:
     - python
-    - pyparsing >=3
+    - pyparsing >=3.0.9
     - graphviz >=2.38.0
 
 test:
@@ -40,7 +40,7 @@ test:
 about:
   home: https://github.com/erocarrera/pydot
   license: MIT
-  license_file: LICENSE
+  license_file: LICENSES/MIT.txt
   summary: Python interface to Graphviz's Dot
   description: |
     This module provides with a full interface to create handle modify and
