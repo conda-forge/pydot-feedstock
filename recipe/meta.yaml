@@ -1,6 +1,6 @@
 {% set name = "pydot" %}
-{% set version = "3.0.1" %}
-{% set sha256 = "e18cf7f287c497d77b536a3d20a46284568fea390776dface6eabbdf1b1b5efc" %}
+{% set version = "3.0.2" %}
+{% set sha256 = "9180da540b51b3aa09fbf81140b3edfbe2315d778e8589a7d0a4a69c41332bae" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
