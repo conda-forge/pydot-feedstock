@@ -1,6 +1,6 @@
 {% set name = "pydot" %}
-{% set version = "3.0.2" %}
-{% set sha256 = "9180da540b51b3aa09fbf81140b3edfbe2315d778e8589a7d0a4a69c41332bae" %}
+{% set version = "3.0.3" %}
+{% set sha256 = "5e009d97b2fff92b7a88f09ec1fd5b163f07f3b10469c927d362471d6faa0d50" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
