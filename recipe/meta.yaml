@@ -1,6 +1,6 @@
 {% set name = "pydot" %}
-{% set version = "3.0.3" %}
-{% set sha256 = "5e009d97b2fff92b7a88f09ec1fd5b163f07f3b10469c927d362471d6faa0d50" %}
+{% set version = "3.0.4" %}
+{% set sha256 = "3ce88b2558f3808b0376f22bfa6c263909e1c3981e2a7b629b65b451eee4a25d" %}
 
 package:
   name: {{ name|lower }}
