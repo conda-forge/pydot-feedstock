@@ -8,3 +8,8 @@ conda_install_tool: pixi
 github:
   branch_name: main
   tooling_branch_name: main
+# not strictly required, but will run two extra excursions for coverage
+noarch_platforms:
+  - linux_64
+  - osx_64
+  - win_64
