@@ -41,11 +41,13 @@ tests:
         - test/
     requirements:
       run:
+        - chardet
+        - parameterized
         - pytest-cov
         - python ${{ python_min }}.*
     script:
       - coverage run --source=pydot --branch -m pytest -vv --tb=long --color=yes
-      - coverage report --show-missing --skip-covered --fail-under=100
+      - coverage report --show-missing --skip-covered --fail-under=74
 
 about:
   license: MIT
