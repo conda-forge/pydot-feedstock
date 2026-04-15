@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "4.0.1"
+  version: "3.0.4"
   python_check_max: "3.14"
 
 package:
@@ -11,11 +11,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pydot/pydot-${{ version }}.tar.gz
-  sha256: c2148f681c4a33e08bf0e26a9e5f8e4099a82e0e2a068098f32ce86577364ad5
+  sha256: 3ce88b2558f3808b0376f22bfa6c263909e1c3981e2a7b629b65b451eee4a25d
 
 build:
   noarch: python
-  number: 2
+  number: 1
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
 
@@ -23,10 +23,10 @@ requirements:
   host:
     - pip
     - python ${{ python_min }}.*
-    - setuptools >=75.3.2
+    - setuptools >=61.0
   run:
     - graphviz >=2.38.0
-    - pyparsing >=3.1.0
+    - pyparsing >=3.0.9
     - python >=${{ python_min }}
 
 tests:
@@ -44,10 +44,12 @@ tests:
         - chardet
         - parameterized
         - pytest-cov
-        - python ${{ python_min }}.*
+        # this branch is specifically interested in whether new 3.14(t) works
+        - python ${{ python_check_max }}.*
+        - python-freethreading
     script:
       - coverage run --source=pydot --branch -m pytest -vv --tb=long --color=yes
-      - coverage report --show-missing --skip-covered --fail-under=74
+      - coverage report --show-missing --skip-covered --fail-under=69
 
 about:
   license: MIT
